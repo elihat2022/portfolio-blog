@@ -1,12 +1,14 @@
+import logo from "../assets/Group 3.png";
+
 export default function NavBar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <a href="/" className="navbar-logo">
           <img
-            src="/src/assets/Group 3.png"
+            src={logo}
             alt="Logo"
-            style={{ width: "auto", height: "30px" }}
+            style={{ width: "auto", height: "30px", display: "block" }}
           />
         </a>
         <ul className="navbar-menu">
