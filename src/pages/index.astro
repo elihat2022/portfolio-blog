@@ -1,11 +1,423 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import NavBar from '../components/NavBar';
+import perfilImage from '../assets/perfil-1.jpg';
+import cvFile from '../assets/cv.pdf';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Elihat Cáceres - Backend and Mobile Developer">
+  <NavBar />
+
+  <div id="container">
+    <main>
+      <section id="hero-dev">
+        <img class="profile-pic" src={perfilImage.src} alt="Elihat Cáceres Profile Picture" />
+        <div class="hero-content">
+          <h1>Elihat Cáceres</h1>
+          <h2>Backend and Mobile Developer</h2>
+          <span class="status-badge">Open to work</span>
+        </div>
+        <p class="description">
+          Hi I'm Elihat a computer science student, and graphic designer with 8 years designing YouTube thumbnails. I love to create beautiful mobile applications and backends. Let's build experiences that pop on screen and scale in production.
+        </p>
+        <div class="links">
+          <a href="mailto:elihatdeveloper@gmail.com" class="btn-primary">Contact me</a>
+          <a href="https://www.linkedin.com/in/elihat-caceres/" target="_blank" class="btn-secondary">LinkedIn</a>
+          <a href="https://github.com/elihat2022" target="_blank" class="btn-secondary">GitHub</a>
+          <a href={cvFile} download="CV_Elihat_Caceres.pdf" class="btn-secondary">Download CV</a>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h3>Experience</h3>
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h4>CustomThumbnails</h4>
+              <p>Graphic Designer</p>
+            </div>
+            <span>2017 - Present</span>
+          </div>
+          <p>
+            Production lead and designer of over 15,000 YouTube thumbnails for multiple channels, helping clients worldwide grow their audiences and increase click-through rates.
+          </p>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h3>Projects</h3>
+        <div class="projects-list">
+          <div class="card card-horizontal">
+            <img src="https://res.cloudinary.com/dvsouhagn/image/upload/v1753142838/foxyU_1_v6tsdf.webp" alt="FoxyU Mobile App" class="project-img-vert" />
+            <div class="card-content">
+              <h4>FoxyU</h4>
+              <p>
+                A mobile platform for Colombian students preparing for the ICFES Saber 11 exams, offering gamified lessons, subject training, progress tracking, and a personalized dashboard.
+              </p>
+              <div class="tags">
+                <span>Flutter</span><span>Dart</span><span>Firebase</span><span>RevenueCat</span><span>Rive</span>
+              </div>
+              <a href="https://play.google.com/store/apps/details?id=com.foxyu.app&pli=1" class="store-link">View on Play Store →</a>
+            </div>
+          </div>
+
+          <div class="card card-horizontal">
+            <img src="https://res.cloudinary.com/dvsouhagn/image/upload/v1753142839/foxyverbs_1_ctnzhs.webp" alt="FoxyVerbs AI App" class="project-img-vert" />
+            <div class="card-content">
+              <h4>FoxyVerbs</h4>
+              <p>
+                FoxyVerbs is an AI-powered app that transforms irregular verb learning with personalized tutoring, voice recognition, and gamified practice. Using Gemini AI, it tracks progress.
+              </p>
+              <div class="tags">
+                <span>Flutter</span><span>Dart</span><span>Firebase</span><span>RevenueCat</span><span>Gemini</span><span>Azure</span>
+              </div>
+              <a href="https://play.google.com/store/apps/details?id=com.eli.todo.flutter&pli=1" class="store-link">View on Play Store →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h3>Open Source</h3>
+        <div class="grid-2">
+          <div class="card">
+            <h4>openclaw-notebooklm</h4>
+            <p>One-command installer for integrating Google NotebookLM with OpenClaw via MCP.</p>
+            <div class="tags"><span>Python</span></div>
+            <a href="#" class="store-link">View on GitHub →</a>
+          </div>
+          <div class="card">
+            <h4>url_shortener</h4>
+            <p>Simple URL shortener API using FastAPI and SQLite.</p>
+            <div class="tags"><span>Python</span></div>
+            <a href="#" class="store-link">View on GitHub →</a>
+          </div>
+          <div class="card">
+            <h4>my_pybot</h4>
+            <p>An interactive CLI-based artificial intelligence agent with tool-calling and persistent memory.</p>
+            <div class="tags"><span>Python</span></div>
+            <a href="#" class="store-link">View on GitHub →</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h3>Education</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>UNIR</h4>
+                <span class="active-date">2023 - Present</span>
+              </div>
+              <p>Bachelor´s degree in Computer Engineering</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>Improsistemas</h4>
+                <span>2021 - 2022</span>
+              </div>
+              <p>Administrative Technician</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>Improsistemas</h4>
+                <span>2020 - 2021</span>
+              </div>
+              <p>Accounting Technician</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <style>
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    #hero-dev {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 8px 25px rgba(38, 20, 103, 0.2), 0 0 0 4px #90cd27;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+      color: #261467;
+    }
+    
+    h2 {
+      font-size: 1.5rem;
+      margin: 0;
+      color: #555;
+      font-weight: 500;
+    }
+
+    .status-badge {
+      display: inline-block;
+      background-color: rgba(144, 205, 39, 0.2);
+      color: #588512;
+      border: 1px solid #90cd27;
+      padding: 5px 15px;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+
+    .description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 600px;
+      color: #444;
+    }
+
+    .links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-primary {
+      background-color: #90cd27;
+      color: #1a4f00;
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: #7ab31d;
+    }
+
+    .btn-secondary {
+      background-color: #261467;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.3s;
+    }
+
+    .btn-secondary:hover {
+      background-color: #1a0e4a;
+    }
+
+    .content-section h3 {
+      font-size: 1.8rem;
+      color: #261467;
+      border-bottom: 2px solid #eaeaea;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      border: 1px solid #eaeaea;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .card-header h4 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #261467;
+    }
+    
+    .card-header p {
+      margin: 5px 0 0 0;
+      color: #666;
+      font-weight: 500;
+    }
+
+    .card-header span {
+      font-size: 0.9rem;
+      color: #888;
+      background: #f4f4f4;
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .projects-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .card-horizontal {
+      flex-direction: row;
+      align-items: stretch;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .card-horizontal {
+        flex-direction: column;
+      }
+      .project-img-vert {
+        width: 100% !important;
+        height: 250px !important;
+      }
+    }
+
+    .project-img-vert {
+      width: 160px;
+      height: auto;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-grow: 1;
+    }
+
+    .project-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .card h4 {
+      margin: 0;
+      color: #261467;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: #555;
+      line-height: 1.5;
+      flex-grow: 1;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tags span {
+      background-color: rgba(38, 20, 103, 0.1);
+      color: #261467;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .store-link {
+      color: #90cd27;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: auto;
+      transition: color 0.3s;
+    }
+
+    .store-link:hover {
+      color: #7ab31d;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      border-left: 3px solid #261467;
+      padding-left: 20px;
+      margin-left: 10px;
+    }
+
+    .timeline-item {
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -28px;
+      top: 5px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #90cd27;
+      border: 3px solid #261467;
+    }
+
+    .timeline-content {
+      background: white;
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      border: 1px solid #eaeaea;
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+
+    .timeline-header h4 {
+      margin: 0;
+      color: #261467;
+    }
+
+    .timeline-header span {
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    .timeline-header .active-date {
+      color: #7ab31d;
+      font-weight: bold;
+    }
+  </style>
 </Layout>
