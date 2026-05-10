@@ -9,6 +9,22 @@ Sitio construido con Astro para mostrar un portfolio profesional y un blog de te
 - Tags en cada post para filtrado y clasificación temática.
 - Rutas separadas para portfolio y blog.
 
+## Deploy en Cloudflare Pages
+
+Este proyecto se puede desplegar como sitio estático en Cloudflare Pages sin adaptador adicional.
+
+### Configuración recomendada
+
+- Build command: `npm run build`
+- Build output directory: `dist`
+- Node version: `22.12` o superior
+
+### Flujo sugerido
+
+1. Conectar el repositorio de GitHub en Cloudflare Pages.
+2. Usar los valores de build anteriores.
+3. Desplegar y, si luego configuras un dominio propio, actualizar `site` en `astro.config.mjs`.
+
 ## Estructura principal
 
 ```text
