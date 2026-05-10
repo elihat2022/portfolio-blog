@@ -1,12 +1,10 @@
-import logo from "../assets/Group 3.png";
-
 export default function NavBar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <a href="/" className="navbar-logo">
           <img
-            src={logo}
+            src="https://res.cloudinary.com/dvsouhagn/image/upload/v1778412490/Group_3_rdqbbe.png"
             alt="Logo"
             style={{ width: "auto", height: "30px", display: "block" }}
           />
@@ -24,16 +22,24 @@ export default function NavBar() {
       <style>
         {`
       .navbar {
-        width: 30%;
+        width: 90%;
+        max-width: 500px;
         border-radius:100px;
         background-color: #0f2500;
         color: white;
-        padding: 10px 30px;
+        padding: 10px 20px;
         box-sizing: border-box;
         margin: 20px auto;
         position: sticky;
         top: 20px;
         z-index: 1000;
+      }
+      @media (max-width: 600px) {
+        .navbar {
+          width: 95%;
+          padding: 8px 15px;
+          top: 10px;
+        }
       }
       .navbar-container {
         display: flex;
